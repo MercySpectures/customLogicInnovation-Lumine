@@ -1,26 +1,41 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/site/Nav";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Features } from "@/components/site/Features";
+import { Products } from "@/components/site/Products";
+import { Faq } from "@/components/site/Faq";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Newsletter } from "@/components/site/Newsletter";
+import { Contact, Footer } from "@/components/site/Contact";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "LUMINÉ — Radiant Skin, Elevated" },
+      { name: "description", content: "Luxury skincare with 100% natural ingredients. Dermatologist tested, eco-friendly, cruelty-free rituals." },
+      { property: "og:title", content: "LUMINÉ — Radiant Skin, Elevated" },
+      { property: "og:description", content: "Luxury skincare crafted with nature's finest ingredients." },
+      { property: "og:type", content: "website" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <main className="bg-background text-foreground">
+      <Nav />
+      <Hero />
+      <Features />
+      <About />
+      <Products />
+      <Faq />
+      <Testimonials />
+      <Newsletter />
+      <Contact />
+      <Footer />
+    </main>
+  );
 }
