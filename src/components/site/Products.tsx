@@ -60,8 +60,8 @@ export function Products() {
   }, []);
 
   return (
-    <section id="products" ref={root} className="relative h-screen overflow-hidden bg-gradient-cream-diag">
-      <div className="absolute top-0 inset-x-0 pt-24 lg:pt-32 px-6 lg:px-10 z-10 pointer-events-none">
+    <section id="products" ref={root} className="relative h-screen flex flex-col overflow-hidden bg-gradient-cream-diag">
+      <div className="pt-12 mb-12 lg:pt-32 px-6 lg:px-10 z-10 pointer-events-none shrink-0">
         <div className="prod-heading max-w-7xl mx-auto flex items-end justify-between gap-8">
           <div>
             <div className="text-xs tracking-[0.3em] uppercase text-accent mb-4">— The Collection</div>
@@ -75,7 +75,7 @@ export function Products() {
         </div>
       </div>
 
-      <div className="absolute inset-0 flex items-center">
+      <div className="flex-1 flex items-center">
         <div ref={track} className="flex gap-8 pl-[10vw] pr-[10vw] will-change-transform">
           {products.map((p, i) => (
             <article
@@ -114,10 +114,6 @@ export function Products() {
             </article>
           ))}
         </div>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs tracking-[0.3em] uppercase text-muted-foreground">
-        ← Scroll to explore →
       </div>
     </section>
   );

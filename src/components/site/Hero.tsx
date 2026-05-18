@@ -29,7 +29,7 @@ export function Hero() {
       ref={root}
       className="relative min-h-screen pt-24 lg:pt-28 bg-gradient-cream overflow-hidden"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-10 items-center min-h-[calc(100vh-7rem)]">
+      <div className="mx-auto mb-12 max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-10 items-center min-h-[calc(100vh-7rem)]">
         <div className="lg:col-span-7 relative z-10">
           <div className="hero-meta inline-flex items-center gap-3 text-xs tracking-[0.25em] uppercase text-muted-foreground mb-8">
             <span className="h-px w-10 bg-accent" />
@@ -86,11 +86,6 @@ export function Hero() {
             <div className="mt-1 font-display text-lg">Hydra Serum · $68</div>
           </div>
         </div>
-      </div>
-
-      <div className="hero-scroll-ind absolute bottom-8 left-1/2 -translate-x-1/2 text-xs tracking-[0.3em] uppercase text-muted-foreground flex flex-col items-center gap-2">
-        Scroll
-        <span className="h-8 w-px bg-foreground/40" />
       </div>
     </section>
   );

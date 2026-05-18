@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Star } from "lucide-react";
 
 const items = [
+  { author: "Michelle Park", role: "Makeup Artist", quote: "I recommend LUMINÉ to all my clients. Unmatched quality — everyone sees results within weeks." },
   { author: "Sarah Mitchell", role: "Beauty Enthusiast", quote: "My skin has never looked better. The serums are absolutely transformative, and I love knowing the products are ethically made." },
   { author: "Emily Rodriguez", role: "Eco-Conscious", quote: "Finally a brand that takes sustainability seriously. Premium results without the environmental guilt." },
   { author: "Dr. Jessica Chen", role: "Dermatologist", quote: "As someone with sensitive skin, I was hesitant. LUMINÉ is gentle yet incredibly effective. Highly recommend." },
